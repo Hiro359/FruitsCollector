@@ -8,18 +8,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    var fruits : [Fruits] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableView.dataSource = self
+        tableView.delegate = self
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            fruits = try context.fetch(Fruits.fetchRequest())
+            tableView.reloadData()
+            
+        } catch {
+        
+        }
+        
     }
-
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return fruits.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt IndexPath : IndexPath) -> UITableViewCell{
+        let cell = UITableViewCell()
+        let fruit = fruits[IndexPath.row]
+        cell.textLabel?.text = fruit.title
+        cell.imageView?.image = UIImage(data: fruit.image as! Data)
+        return cell
+        
+    }
+    
 }
 

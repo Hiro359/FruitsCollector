@@ -13,6 +13,8 @@
 		240B0C111DAB83F900385FDC /* FruitsCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 240B0C0F1DAB83F900385FDC /* FruitsCollector.xcdatamodeld */; };
 		240B0C131DAB83F900385FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240B0C121DAB83F900385FDC /* Assets.xcassets */; };
 		240B0C161DAB83F900385FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B0C141DAB83F900385FDC /* LaunchScreen.storyboard */; };
+		24FFF1791DACB6D2003BC9EC /* Apple .jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 24FFF1781DACB6D2003BC9EC /* Apple .jpeg */; };
+		24FFF17B1DACB8C1003BC9EC /* FruitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FFF17A1DACB8C1003BC9EC /* FruitsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		240B0C121DAB83F900385FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		240B0C151DAB83F900385FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		240B0C171DAB83F900385FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24FFF1781DACB6D2003BC9EC /* Apple .jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Apple .jpeg"; sourceTree = "<group>"; };
+		24FFF17A1DACB8C1003BC9EC /* FruitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				240B0C081DAB83F900385FDC /* AppDelegate.swift */,
 				240B0C0A1DAB83F900385FDC /* ViewController.swift */,
+				24FFF17A1DACB8C1003BC9EC /* FruitsViewController.swift */,
 				240B0C0C1DAB83F900385FDC /* Main.storyboard */,
 				240B0C121DAB83F900385FDC /* Assets.xcassets */,
 				240B0C141DAB83F900385FDC /* LaunchScreen.storyboard */,
 				240B0C171DAB83F900385FDC /* Info.plist */,
 				240B0C0F1DAB83F900385FDC /* FruitsCollector.xcdatamodeld */,
+				24FFF1781DACB6D2003BC9EC /* Apple .jpeg */,
 			);
 			path = FruitsCollector;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				240B0C161DAB83F900385FDC /* LaunchScreen.storyboard in Resources */,
+				24FFF1791DACB6D2003BC9EC /* Apple .jpeg in Resources */,
 				240B0C131DAB83F900385FDC /* Assets.xcassets in Resources */,
 				240B0C0E1DAB83F900385FDC /* Main.storyboard in Resources */,
 			);
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				240B0C0B1DAB83F900385FDC /* ViewController.swift in Sources */,
+				24FFF17B1DACB8C1003BC9EC /* FruitsViewController.swift in Sources */,
 				240B0C091DAB83F900385FDC /* AppDelegate.swift in Sources */,
 				240B0C111DAB83F900385FDC /* FruitsCollector.xcdatamodeld in Sources */,
 			);
@@ -303,6 +311,7 @@
 				240B0C1C1DAB83F900385FDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
