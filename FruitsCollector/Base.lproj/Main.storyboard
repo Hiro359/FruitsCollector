@@ -16,13 +16,13 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KpS-4F-r0T">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hwb-fw-6Gg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="603"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableView>
@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="Wen-Zd-HKV">
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="Jzt-KB-VAb">
                             <connections>
-                                <segue destination="prS-Jj-jGT" kind="show" id="qyg-EZ-G1m"/>
+                                <segue destination="prS-Jj-jGT" kind="show" identifier="fruitSegue" id="qyg-EZ-G1m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -60,10 +60,10 @@
                         <viewControllerLayoutGuide type="bottom" id="oXg-aZ-hJF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hca-oj-KHi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple .jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="vPY-Gm-qtB">
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple .jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="vPY-Gm-qtB">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="5s0-dT-1Qa"/>
                                     <constraint firstAttribute="width" constant="240" id="Vve-dI-a1W"/>
@@ -80,16 +80,26 @@
                                     <action selector="addTapped:" destination="prS-Jj-jGT" eventType="touchUpInside" id="QHZ-td-RA5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJZ-61-HeL">
+                                <frame key="frameInset" minX="138" minY="336" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="prS-Jj-jGT" eventType="touchUpInside" id="SHF-js-3R9"/>
+                                    <action selector="deleteTapped:" destination="prS-Jj-jGT" eventType="touchUpInside" id="EOR-A9-TvV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vPY-Gm-qtB" firstAttribute="top" secondItem="PdH-xR-UEo" secondAttribute="bottom" constant="30" id="18B-Ue-1vn"/>
+                            <constraint firstItem="QJZ-61-HeL" firstAttribute="centerX" secondItem="hca-oj-KHi" secondAttribute="centerX" constant="1" id="6oa-Jp-1w2"/>
                             <constraint firstItem="vPY-Gm-qtB" firstAttribute="centerX" secondItem="hca-oj-KHi" secondAttribute="centerX" id="6wZ-qt-LuK"/>
                             <constraint firstItem="Hje-AT-s7j" firstAttribute="centerX" secondItem="hca-oj-KHi" secondAttribute="centerX" id="E3y-F2-429"/>
+                            <constraint firstItem="cKf-2c-EfE" firstAttribute="top" secondItem="vPY-Gm-qtB" secondAttribute="bottom" constant="-54" id="Plz-Oa-mgF"/>
                             <constraint firstItem="cKf-2c-EfE" firstAttribute="centerX" secondItem="hca-oj-KHi" secondAttribute="centerX" id="X6X-he-H3a"/>
-                            <constraint firstItem="cKf-2c-EfE" firstAttribute="top" secondItem="vPY-Gm-qtB" secondAttribute="bottom" constant="17" id="bCi-aj-Kne"/>
+                            <constraint firstItem="vPY-Gm-qtB" firstAttribute="top" secondItem="PdH-xR-UEo" secondAttribute="bottom" id="X98-hv-zBd"/>
+                            <constraint firstItem="cKf-2c-EfE" firstAttribute="top" secondItem="vPY-Gm-qtB" secondAttribute="bottom" constant="-54" id="bCi-aj-Kne"/>
+                            <constraint firstItem="Hje-AT-s7j" firstAttribute="top" secondItem="cKf-2c-EfE" secondAttribute="bottom" constant="8" id="e4F-ni-wwO"/>
                             <constraint firstItem="cKf-2c-EfE" firstAttribute="width" secondItem="vPY-Gm-qtB" secondAttribute="width" id="nMX-49-Pna"/>
-                            <constraint firstItem="Hje-AT-s7j" firstAttribute="top" secondItem="cKf-2c-EfE" secondAttribute="bottom" constant="8" id="sfa-AT-sjv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="067-mG-37v">
@@ -109,6 +119,8 @@
                     <connections>
                         <outlet property="FruitsImageView" destination="vPY-Gm-qtB" id="qtG-GX-e1L"/>
                         <outlet property="Titletextfield" destination="cKf-2c-EfE" id="u1x-PW-ju3"/>
+                        <outlet property="addupdatedbutton" destination="Hje-AT-s7j" id="2pW-Wi-LcE"/>
+                        <outlet property="deletebutton" destination="QJZ-61-HeL" id="Xvn-QO-lv4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTR-Ou-pMh" userLabel="First Responder" sceneMemberID="firstResponder"/>

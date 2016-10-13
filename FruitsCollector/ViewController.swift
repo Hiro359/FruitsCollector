@@ -46,6 +46,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         let fruit = fruits[indexPath.row]
+         performSegue(withIdentifier: "fruitSegue", sender: fruit)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nectVC = segue.destination as! FruitsViewController
+        nectVC.fruit = sender as? Fruits
+        
+    }
 }
 

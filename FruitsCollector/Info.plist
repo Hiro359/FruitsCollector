@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>We want access to your camera so that we can catalog your picutres </string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We want access to  your exsisting picrures so that you do not have to take a new picture</string>
 	<key>CFBundleExecutable</key>
